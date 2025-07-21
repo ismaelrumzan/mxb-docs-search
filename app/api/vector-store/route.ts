@@ -35,6 +35,7 @@ export async function GET(request: NextRequest) {
     top_k: 10,
     search_options: {
       return_metadata: true,
+      rerank: true,
     },
   });
 
