@@ -5,7 +5,7 @@ import SearchDialog from 'fumadocs-ui/components/dialog/search-default';
 
 export default function CustomSearchDialog(props: SharedProps) {
   return (
-    <SearchDialog
+    <SearchDialog 
       api="/api/vector-store"
       delayMs={200}
       {...props}
