@@ -68,7 +68,6 @@ export async function GET(request: NextRequest) {
       duration_ms: durationMs,
       timestamp: new Date().toISOString(),
     };
-    console.log(JSON.stringify(logRecord));
     await appendSessionLog(logRecord);
     const response = NextResponse.json(
       { error: "Environment setup failed" },
@@ -99,7 +98,6 @@ export async function GET(request: NextRequest) {
       duration_ms: durationMs,
       timestamp: new Date().toISOString(),
     };
-    console.log(JSON.stringify(logRecord));
     await appendSessionLog(logRecord);
     const response = NextResponse.json(
       { error: "Query is required" },
@@ -176,7 +174,6 @@ export async function GET(request: NextRequest) {
       duration_ms: durationMs,
       timestamp: new Date().toISOString(),
     };
-    console.log(JSON.stringify(logRecord));
     await appendSessionLog(logRecord);
 
     const response = NextResponse.json(fumaStructuredResponse);
@@ -201,7 +198,6 @@ export async function GET(request: NextRequest) {
       error: error instanceof Error ? error.message : String(error),
       timestamp: new Date().toISOString(),
     };
-    console.log(JSON.stringify(logRecord));
     await appendSessionLog(logRecord);
     const response = NextResponse.json(
       { error: "Search failed" },
