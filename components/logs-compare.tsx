@@ -58,7 +58,7 @@ function ProviderColumn({
   providers: string[];
   rows: SearchLog[];
 }) {
-  const filtered = useMemo(() => rows.filter((r) => r.provider === provider), [rows, provider]);
+  const filtered = useMemo(() => rows.filter((r) => r.provider === provider && r.duration_ms > 0), [rows, provider]);
   const avg = useMemo(() => {
     if (filtered.length === 0) return 0;
     const sum = filtered.reduce((acc, r) => acc + (r.duration_ms ?? 0), 0);
