@@ -19,7 +19,6 @@ export function CustomRootProvider({ children, provider = 'mixedbread' }: Custom
     <RootProvider
       search={{
         SearchDialog: searchDialog,
-        options: provider === 'mixedbread' ? { api: '/api/vector-store' } : undefined,
       }}
     >
       {children}
